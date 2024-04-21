@@ -7,12 +7,13 @@ body{
 }
 .todoapp{
     width: 100%;
-    max-width: 540px;
+    max-width: 270px;
     background: #f1e8df;
-    margin: 30px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
+    margin: 15px auto 10px;
+    padding: 5px 15px 5px;
+    border-radius: 5px;
     opacity: 0.95;
+    box-shadow: 0 0 10px rgba(52, 34, 20, 0.7);
 }
 @font-face {
     font-family: typewriter;
@@ -21,23 +22,23 @@ body{
 .todoapp h2{
     color: black;
     font-family: typewriter;
-    
+    font-size: medium;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .todoapp h2 img{
-    width: 30px;
-    margin-left: 10px;
+    width: 15px;
+    margin-left: 5px;
 }
 .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-bottom: 12.5px;
     font-family: typewriter;
 }
 input{
@@ -45,41 +46,41 @@ input{
     border: none;
     outline: none;
     background: transparent;
-    padding: 10px;
+    padding: 5px;
     font-family: typewriter;
 }
 button{
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 8px 25px;
     background: #342214;
     color: #f1e8df;
     font-family: typewriter;
-    font-size: 16px;
+    font-size: 10px;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 20px;
 }
-ul li{
+.todoapp li{
     list-style: none;
-    font-size: 19px;
-    padding: 15px 8px 12px 45px;
+    font-size: 15px;
+    padding: 7.5px 4px 6px 10px;
     user-select: none;
     cursor: pointer;
     font-family: typewriter;
     position: relative;
 }
 
-ul li::before{
+.todoapp ul li::before{
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     background-image: url(images/checkbox.svg);
     background-size: cover;
     background-position: center;
-    top: 12px;
-    left: -8px;
+    top: 6px;
+    left: -30px;
 }
 ul li.checked{
     color: #342214;
@@ -91,17 +92,114 @@ ul li.checked::before{
 ul li span{
     position: absolute;
     right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+    top: 2.5px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
     font-family: typewriter;
     color: black;
-    line-height: 40px;
+    line-height: 20px;
     text-align: center;
 }
 ul li span:hover{
     background: #342214;
     color: #f1e8df;
-    border-radius: 8px;
+    border-radius: 4px;
+}
+
+.contain{
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: typewriter;
+}
+
+.wrapper{
+  width: 450px;
+  background: #f1e8df;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(52, 34, 20, 0.7);
+  opacity: 0.95;
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+  font-family: typewriter;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background-color: #342214;
+  opacity: 0.95;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
 }
