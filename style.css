@@ -15,6 +15,40 @@ body{
     opacity: 0.95;
     box-shadow: 0 0 10px rgba(52, 34, 20, 0.7);
 }
+.budget{
+  width: 100%;
+  max-width: 270px;
+  background: #f1e8df;
+  margin: 7px auto 10px;
+  padding: 5px 15px 5px;
+  border-radius: 5px;
+  opacity: 0.95;
+  box-shadow: 0 0 10px rgba(52, 34, 20, 0.7);
+}
+.budget h2{
+    color: black;
+    font-family: typewriter;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.budget h5{
+  color: black;
+    font-family: typewriter;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#balance, #income, #expense{
+  color: #f1e8df;
+  font-family: typewriter;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 @font-face {
     font-family: typewriter;
     src: url(elegant_typewriter/ELEGANT\ TYPEWRITER\ Regular.ttf);
@@ -22,14 +56,18 @@ body{
 .todoapp h2{
     color: black;
     font-family: typewriter;
-    font-size: medium;
+    font-size: large;
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 .todoapp h2 img{
-    width: 15px;
+    width: 18px;
     margin-left: 5px;
+}
+.budget h2 img{
+  width: 18px;
+  margin-left: 5px;
 }
 .row{
     display: flex;
@@ -203,3 +241,111 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
+.flex-container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: flex-start; 
+  padding: 20px; 
+}
+
+
+.calendar {
+  flex: 0 0 70%; 
+  margin: 1px; 
+}
+.todoapp{
+  flex: 0 0 30%;
+  margin: 7px;
+}
+
+header, .anime{
+   background-color: #342214;
+   color: #f1e8df;
+   padding: 1rem;
+   text-align: center;
+   border-radius: 5px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.anime div{
+  padding: 5px;
+}
+
+.anime div:first-child{
+  flex-basis: 100%;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.anime div:nth-child(n+2) {
+  flex-basis: 50%;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.anime h5{
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f1e8df;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: typewriter;
+}
+
+form input{
+  width: 180px;
+  padding: 10px;
+  border: 1px solid #878787;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  height: 20px;
+  font-family: typewriter;
+  font-size: 1rem;
+}
+font button{
+  background-color: #342214;
+  color: #f1e8df;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 3px 5px rgba(52, 34, 20, 0.7);
+}
+
+form div:first-child{
+  flex-basis: 100%;
+}
+
+form div:nth-child(n+2){
+  flex-basis: calc(50% - 5px);
+}
+
+form label{
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h3, .anime, ul{
+  margin-bottom: 0.5rem;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#status {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h3{
+  font-family: typewriter;
+}
+
+
+
