@@ -15,6 +15,9 @@ body{
     opacity: 0.95;
     box-shadow: 0 0 10px rgba(52, 34, 20, 0.7);
 }
+.main h1{
+  text-align: center;
+}
 .budget{
   width: 100%;
   max-width: 270px;
@@ -347,5 +350,61 @@ h3{
   font-family: typewriter;
 }
 
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 575.98px) {
+  html {
+      font-size: 85%; 
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  html {
+      font-size: 90%; 
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: 95%; 
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  section {
+      flex: 1;
+      margin: 0 1rem;
+  }
+
+  header, footer {
+      text-align: left;
+      padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+      font-size: 100%; /* 16px */
+  }
+
+  main {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+
+  header, footer {
+      padding: 1rem 4rem;
+  }
+}
 
 
